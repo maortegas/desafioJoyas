@@ -1,5 +1,4 @@
 const format = require("pg-format");
-const db = require("../db");
 const pool = require("../db");
 const { selectAllJoyas } = require("../querys");
 
