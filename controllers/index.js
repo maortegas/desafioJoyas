@@ -15,7 +15,7 @@ const getJoyasController = async (req, res, next) => {
       limits,
       offset
     );
-    const { rows } = await db.query(formattedQuery);
+    const { rows } = await pool.query(formattedQuery);
 
     if (rows.count == 0) {
       res.status(404).json({
