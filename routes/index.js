@@ -2,7 +2,7 @@ const {
   getJoyasController,
   getJoyasFiltrosController,
 } = require("../controllers");
-const { getReportMiddleware } = require("../middlewares");
+const { getReportMiddleware } = require("../middlewares/validateHATEOAS");
 const router = require("express").Router();
 const validateFilters = require("../middlewares/validateFilters");
 
