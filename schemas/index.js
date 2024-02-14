@@ -1,8 +1,12 @@
 const z = require("zod");
 
 const joyaSchema = z.object({
-  limits: z.coerce.number().min(1),
-  page: z.coerce.number().min(1),
+  limits: z.coerce
+    .number()
+    .min(1, { message: "Debe ingresar un numero mayor a 0" }),
+  page: z.coerce
+    .number()
+    .min(1, { message: "Debe ingresar un numero mayor a 0" }),
   order_by: z.enum([
     "id_ASC",
     "id_DESC",
